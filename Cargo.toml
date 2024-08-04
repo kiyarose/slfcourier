@@ -1,0 +1,30 @@
+[package]
+name = "courier"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+rustls = "0.22.1"
+mail-parser = "0.9.2"
+serde_json = "1.0.108"
+toml = "0.8.8"
+html2text = "0.9.1"
+
+[dependencies.imap]
+version = "3.0.0-alpha.12"
+default-features = false
+features = ["rustls-tls"]
+
+[dependencies.reqwest]
+version = "0.11.23"
+default-features = false
+features = ["json", "multipart", "rustls-tls"]
+
+[dependencies.tokio]
+version = "1.35.1"
+features = ["full"]
+
+[dependencies.serde]
+version = "1.0.193"
+features = ["derive"]
